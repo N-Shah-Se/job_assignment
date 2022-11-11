@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "bfcc8daf-17ed-4602-9597-a4c08f62182f",
+		"name": "Assignment_Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "View Data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-tokens",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNfaWQiOiJiMGJhNjU4MC03ZDFjLTQ2YzctYmM4Zi1iYzBlNDk5NjFhYTEiLCJleHAiOjE2NjgxNjk1MzV9.VO6aWLnexa9xxLd3ig0-o3eKptTMTO8Uuy-m2WeIW-o",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://192.168.1.126:5000/view/?user_id",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"126"
+					],
+					"port": "5000",
+					"path": [
+						"view",
+						""
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNfaWQiOiJiMGJhNjU4MC03ZDFjLTQ2YzctYmM4Zi1iYzBlNDk5NjFhYTEiLCJleHAiOjE2NjgxNzI4MDZ9.Cf8U1lnc5SqiRPUzNzFWgYo8LBcTN_UoqWlBTX7HDhw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/delete/?user_id=",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"delete",
+						""
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updated User Record",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNfaWQiOiJiMGJhNjU4MC03ZDFjLTQ2YzctYmM4Zi1iYzBlNDk5NjFhYTEiLCJleHAiOjE2NjgxNzY1OTB9.-PuIh9tlpFdDMYfQIFrN1QDdvpANyHyaEwthiGq3Gm0",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Mubassir Shah\",\n    \"department\":\"Software Engineering\",\n    \"password\": \"password1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.1.15:5000/update",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"1",
+						"15"
+					],
+					"port": "5000",
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"nasir\",\n    \"name\":\"Nasir Shah\",\n    \"department\":\"Software Engineering\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNfaWQiOiJiMGJhNjU4MC03ZDFjLTQ2YzctYmM4Zi1iYzBlNDk5NjFhYTEiLCJleHAiOjE2NjgxNzI4MDZ9.Cf8U1lnc5SqiRPUzNzFWgYo8LBcTN_UoqWlBTX7HDhw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"nasir\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
